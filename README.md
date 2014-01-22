@@ -13,4 +13,4 @@ Packing
 Installing
 ---
 
-Just drag jenkins-notifications.crx file into chrome://extensions/ page
+Just drag jenkins-notifications.crx file from dist directory into chrome://extensions/ page
