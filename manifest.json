@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+    
+  "name": "Jenkins Notifications",
+  "version": "0.3",
+  "description": "Jenkins Notifications by Andrzej Hołowko. Informuje o zakończeniu build'u.",
+  
+  "permissions": [
+    "tabs", "notifications", "storage", 
+    "http://jenkins/*"
+  ],
+  
+  "options_page": "html/options.html",
+  "background": { 
+      "scripts": ["js/lib/jquery.js", "js/lib/URI.js", "js/util.js", "js/background.js"] 
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://jenkins/*"],
+      "js": ["js/lib/jquery.js", "js/lib/URI.js", "js/util.js", "js/subscription.js"]
+    }
+  ],
+  
+  "web_accessible_resources": [
+    "icons/48.png"
+  ],
+  "icons": {
+      "16": "icons/16.png", 
+      "48": "icons/48.png", 
+      "128": "icons/128.png"
+  }
+}
